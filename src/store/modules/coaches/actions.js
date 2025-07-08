@@ -1,6 +1,6 @@
 export default {
   async registerCoach(context, payload) {
-    const userId = context.rootGetters.userId;
+    const userId = context.rootGetters['auth/userId'];
     const coachData = {
       firstName: payload.first,
       lastName: payload.last,
@@ -10,11 +10,11 @@ export default {
     };
 
     try {
-      const response = await fetch('https://cloud.appwrite.io/v1/databases/686905320026ca8ef9c1/collections/68690548002b29a2170c/documents', {
+      const response = await fetch('https://cloud.appwrite.io/v1/databases/686ce7f500334f728440/collections/686ce83f001e4ecb1bc3/documents', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Appwrite-Project': '6869050f000a7bb2c29b'
+          'X-Appwrite-Project': '686ce7de001feaafea60'
         },
         body: JSON.stringify({
           documentId: userId,
@@ -22,7 +22,7 @@ export default {
         })
       });
 
-      await response.json();
+      const data = await response.json();
 
       if (!response.ok) {
         const error = new Error(data.message || 'Failed to fetch!');
@@ -44,10 +44,10 @@ export default {
       return;
     }
     try {
-      const response = await fetch('https://cloud.appwrite.io/v1/databases/686905320026ca8ef9c1/collections/68690548002b29a2170c/documents', {
+      const response = await fetch('https://cloud.appwrite.io/v1/databases/686ce7f500334f728440/collections/686ce83f001e4ecb1bc3/documents', {
         method: 'GET',
         headers: {
-          'X-Appwrite-Project': '6869050f000a7bb2c29b'
+          'X-Appwrite-Project': '686ce7de001feaafea60'
         }
       });
       const data = await response.json();

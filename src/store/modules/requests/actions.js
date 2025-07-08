@@ -6,11 +6,11 @@ export default {
       coachId: payload.coachId
     };
     try {
-      const response = await fetch('https://cloud.appwrite.io/v1/databases/686b704300265f3e337c/collections/686b704d001d54aae295/documents', {
+      const response = await fetch('https://cloud.appwrite.io/v1/databases/686ce7f500334f728440/collections/686ce800001290fecf85/documents', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Appwrite-Project': '686b7036003d592bfda0'
+          'X-Appwrite-Project': '686ce7de001feaafea60'
         },
         body: JSON.stringify({
           documentId: 'unique()',
@@ -33,10 +33,10 @@ export default {
   },
   async fetchRequests(context) {
     try {
-      const response = await fetch('https://cloud.appwrite.io/v1/databases/686b704300265f3e337c/collections/686b704d001d54aae295/documents', {
+      const response = await fetch('https://cloud.appwrite.io/v1/databases/686ce7f500334f728440/collections/686ce800001290fecf85/documents', {
         method: 'GET',
         headers: {
-          'X-Appwrite-Project': '686b7036003d592bfda0'
+          'X-Appwrite-Project': '686ce7de001feaafea60'
         }
       });
       const data = await response.json();

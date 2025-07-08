@@ -11,7 +11,7 @@
       <section>
         <slot></slot>
       </section>
-      <menu>
+      <menu v-if="!fixed">
         <slot name="actions">
           <base-button @click="tryClose">Close</base-button>
         </slot>
@@ -32,10 +32,18 @@ export default {
       type: String,
       required: false,
     },
+    fixed: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   emits: ['close'],
   methods: {
     tryClose() {
+      if (this.fixed) {
+        return;
+      }
       this.$emit('close');
     },
   },
