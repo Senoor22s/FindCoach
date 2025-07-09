@@ -73,3 +73,34 @@ export default {
   },
 };
 </script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@700;900&family=Roboto:wght@700;900&display=swap');
+
+h2 {
+  font-family: 'Vazirmatn', 'Roboto', 'Segoe UI', Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: #12314d;
+  line-height: 1.18;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5em;
+  text-shadow: 0 2px 10px #d0e2f766, 0 1px 1px #eef6ffab;
+}
+
+h3 {
+  font-family: 'Vazirmatn', 'Roboto', 'Segoe UI', Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.21rem;
+  color: #23517a;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.3px;
+}
+p {
+  font-family: 'Vazirmatn', 'Roboto', 'Segoe UI', Tahoma, Geneva, Arial, sans-serif;
+  font-size: 1.03rem;
+  color: #26364d;
+  text-align: justify;
+  line-height: 1.7;
+}
+</style>

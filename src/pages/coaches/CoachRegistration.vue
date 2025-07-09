@@ -1,7 +1,7 @@
 <template>
   <section>
     <base-card>
-      <h2>Register as a coach now!</h2>
+      <h2>Register as coach now!</h2>
       <coach-form></coach-form>
     </base-card>
   </section>
@@ -27,3 +27,16 @@ export default {
   }
 };
 </script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@700;900&family=Roboto:wght@700;900&display=swap');
+
+h2 {
+  font-family: 'Vazirmatn', 'Roboto', 'Segoe UI', Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: rgb(18, 45, 69);
+  margin-bottom: 0.6em;
+  line-height: 1.22;
+}
+</style>

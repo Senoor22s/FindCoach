@@ -10,6 +10,6 @@
 <style scoped>
 a{
   text-decoration: none;
-  color: aliceblue;
+  color: rgb(62, 120, 168);
 }
 </style>

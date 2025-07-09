@@ -1,10 +1,12 @@
 <template>
-  <the-header></the-header>
-  <router-view v-slot="slotProps">
-    <transition name="route" mode="out-in">
-      <component :is="slotProps.Component"></component>
-    </transition>
-  </router-view>
+  <div class="silver-app-bg">
+    <the-header />
+    <router-view v-slot="slotProps">
+      <transition name="route" mode="out-in">
+        <component :is="slotProps.Component"></component>
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script>
@@ -27,13 +29,23 @@ export default {
   box-sizing: border-box;
 }
 
-html {
+html, body, #app {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e3e6ea 45%, #bfc9d1 100%);
+  color: #23272e;
 }
 
-body {
-  margin: 0;
+.silver-app-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, #f8fafd 0%, #e8e9ec 60%, #bcbbc5 100%);
+  display: flex;
+  flex-direction: column;
 }
+
 .route-enter-from {
   opacity: 0;
   transform: translateY(-30px);

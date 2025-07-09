@@ -18,7 +18,7 @@
       </div>
       <p
         v-if="!formIsValid"
-      >Please enter a valid email and password (must be at least 6 characters long).</p>
+      >Please enter a valid email and password (must be at least 6 characters long)</p>
       <base-button>{{ submitButtonCaption }}</base-button>
       <base-button type="button" mode="flat" @click="switchAuthMode">{{ switchModeButtonCaption }}</base-button>
     </form>
@@ -99,34 +99,52 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;700;900&family=Roboto:wght@500;700;900&display=swap');
+
 form {
   margin: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1),
+              0 0 20px rgba(173, 216, 230, 0.4);
+  backdrop-filter: blur(8px) saturate(150%);
 }
 
 .form-control {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
+  font-family: 'Vazirmatn', 'Roboto', 'Segoe UI', Tahoma, Geneva, Arial, sans-serif;
+  color: #12314d;
 }
 
 label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
   display: block;
+  letter-spacing: 0.2px;
+  color: #23517a;
 }
-
 input,
 textarea {
   display: block;
   width: 100%;
   font: inherit;
-  border: 1px solid #ccc;
-  padding: 0.15rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid rgba(173, 216, 230, 0.5);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #12314d;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
   border-color: #3d008d;
-  background-color: #faf6ff;
+  background-color: rgba(250, 246, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(173, 216, 230, 0.6),
+              0 2px 5px rgba(0, 0, 0, 0.15);
   outline: none;
 }
 </style>

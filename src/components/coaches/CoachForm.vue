@@ -149,60 +149,110 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .form-control {
   margin: 0.5rem 0;
 }
 
 label {
-  font-weight: bold;
+  font-weight: 600;
   display: block;
   margin-bottom: 0.5rem;
+  color: #1c3350;
+  letter-spacing: 0.01em;
+  background: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.form-control > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.31rem;
 }
 
 input[type='checkbox'] + label {
-  font-weight: normal;
   display: inline;
-  margin: 0 0 0 0.5rem;
+  margin: 0 0 0 0.32rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #244d6c;
+  letter-spacing: 0.020em;
+  border-radius: 1.25rem;
+  padding: 0.12rem 0.36rem 0.12rem 0.44rem;
+  background: linear-gradient(117deg, #f7fafc 80%, #e7f1fb 100%);
+  transition: background 0.16s, color 0.16s, font-weight 0.14s, text-shadow 0.19s;
+  text-shadow: 0 2px 9px #e3eeff12;
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  accent-color: #3578d4;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin-right: 0.0rem;
+  border-radius: 6px;
+  border: 1.5px solid #a8c4df;
+  background: linear-gradient(140deg, #edf4fb 75%, #d0e0f1 100%);
+  box-shadow: 0 0 8px #c3ddf855;
+  vertical-align: middle;
+  transition: border 0.17s, box-shadow 0.15s;
+}
+
+input[type='checkbox']:focus {
+  outline: #2678e7 solid 1.3px;
+  box-shadow: 0 1px 8px #8ec0ff33;
+}
+
+input[type='checkbox']:checked + label {
+  color: #2360b2;
+  font-weight: 700;
+  background: linear-gradient(95deg, #e4eef9 65%, #cbe0fa 130%);
+  text-shadow:
+    0 3px 10px #b7d4f240,
+    0 2px 6px #b5cdfa23,
+    0 0 2px #aed4fa0c;
 }
 
 input,
 textarea {
   display: block;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #bdd5ed;
   font: inherit;
+  border-radius: 8px;
+  background: linear-gradient(112deg, #f9fbfd 80%, #deebf7 100%);
+  padding: 0.4rem 0.7rem;
+  transition: border 0.15s, box-shadow 0.15s;
+  font-size: 1rem;
+  color: #1e3556;
+  box-shadow: 0 1px 8px #eaf5ff18;
 }
 
 input:focus,
 textarea:focus {
-  background-color: #f0e6fd;
+  background: #f0f7ff;
   outline: none;
-  border-color: #3d008d;
-}
-
-input[type='checkbox'] {
-  display: inline;
-  width: auto;
-  border: none;
-}
-
-input[type='checkbox']:focus {
-  outline: #3d008d solid 1px;
+  border-color: #2360b2;
+  box-shadow: 0 2px 10px #b6d8fd33;
 }
 
 h3 {
   margin: 0.5rem 0;
   font-size: 1rem;
+  font-weight: 700;
+  color: #1b4578;
+  text-shadow: 0 2px 8px #e3eeff44;
+  letter-spacing: 0.01em;
 }
 
 .invalid label {
-  color: red;
+  color: #c61132 !important;
 }
 
 .invalid input,
 .invalid textarea {
-  border: 1px solid red;
+  border: 1.2px solid #c61132;
 }
 </style>

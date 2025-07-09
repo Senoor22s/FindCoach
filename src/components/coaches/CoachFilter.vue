@@ -45,7 +45,18 @@ export default {
 
 <style scoped>
 h2 {
-  margin: 0.5rem 0;
+  color: #244d6c;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  word-break: break-word;
+  letter-spacing: 0.08rem;
+}
+label {
+  color: #244d6c;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  word-break: break-word;
+  letter-spacing: 0.08rem;
 }
 
 .filter-option {
@@ -63,5 +74,10 @@ h2 {
 
 .filter-option.active label {
   font-weight: bold;
+}
+.filter-option input[type="checkbox"]:checked + label {
+  font-weight: bold;
+  color: #2769c7;
+  text-shadow: 0 0 4px #e9f7ffcc, 0 2px 8px #c9d8ff33;
 }
 </style>
