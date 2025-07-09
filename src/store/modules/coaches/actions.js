@@ -14,12 +14,14 @@ export default {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Appwrite-Project': '686ce7de001feaafea60'
+          'X-Appwrite-Project': '686ce7de001feaafea60',
+          'X-Appwrite-Session': context.rootGetters['auth/token']
         },
         body: JSON.stringify({
           documentId: userId,
           data: coachData
-        })
+        }),
+        credentials: 'include'
       });
 
       const data = await response.json();
@@ -28,7 +30,6 @@ export default {
         const error = new Error(data.message || 'Failed to fetch!');
         throw error;
       }
-
       context.commit('registerCoach', {
         ...coachData,
         id: userId

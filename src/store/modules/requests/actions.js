@@ -10,7 +10,7 @@ export default {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Appwrite-Project': '686ce7de001feaafea60'
+          'X-Appwrite-Project': '686ce7de001feaafea60',
         },
         body: JSON.stringify({
           documentId: 'unique()',
@@ -36,8 +36,10 @@ export default {
       const response = await fetch('https://cloud.appwrite.io/v1/databases/686ce7f500334f728440/collections/686ce800001290fecf85/documents', {
         method: 'GET',
         headers: {
-          'X-Appwrite-Project': '686ce7de001feaafea60'
-        }
+          'X-Appwrite-Project': '686ce7de001feaafea60',
+          'X-Appwrite-Session': context.rootGetters['auth/token']
+        },
+        credentials: 'include'
       });
       const data = await response.json();
 
