@@ -54,7 +54,7 @@ export default {
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background: rgba(41, 61, 92, 0.34); /* آبی تیره و شفاف */
+  background: rgba(41, 61, 92, 0.34);
   backdrop-filter: blur(3.7px);
   z-index: 10;
 }
@@ -72,12 +72,11 @@ export default {
   margin: 0;
   overflow: hidden;
   background: rgba(247, 250, 254, 0.88);
-  backdrop-filter: blur(18px) saturate(1.26); /* افکت شیشه‌ای */
+  backdrop-filter: blur(18px) saturate(1.26);
   transition: box-shadow .18s;
 }
 
 .silver-dialog header {
-  /* گرادیان آبی-نقره‌ای مدرن */
   background: linear-gradient(
     92deg,
     #6e91c9 16%,
